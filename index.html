@@ -7,53 +7,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internet Provider Website</title>
     <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
     <header id="heading">
         <div class="home">
+            <a class="logo" href="index.html">
+                <img width="179" height="50" src="img/space-net-logo.svg" alt="Space Net Logo">
+            </a>
+        </div>
+        <div class="menu">
             <nav>
-                <img width="100" src="img/space-net-logo.svg" alt="Space Net Logo">
-                <a href="#about_us">About us</a>
+                <a href="#about-us">About us</a>
                 <a href="#services">Services</a>
                 <a href="#plans">Plans</a>
-                <a href="#contact_us">Contact us</a>
+                <a href="#contacts">Contact us</a>
                 <a href="cart.html">Cart</a>
             </nav>
         </div>
-        <div class="banner">
-            <img src="img/earth-picture.webp" alt="Earth">
-            <h1>Space Net</h1>
-            <p>Internet Provieder you can trust!</p>
-            <button>Get Connected</button>
-        </div>
     </header>
     <main>
-        <div class="about-as">
-            <h2 id="about_us">About us</h2>
-            <img src="img/illustration-man.png" alt="Illustration">
-            <p>We offer fast and steady Internet for home, office, and commercial purposes.</p>
-            <p>Space Net is one of the largest Internet service providers in the USA. We offer services both for
-                home and for offices, commercial organizations, large companies. Switching to Space Net, you will
-                receive high-speed, steady, and secure Internet for your purposes.</p>
-            <div>
-                <button>Get Connected</button>
-                <button>Pricing</button>
+        <div class="banner">
+            <div class="banner-image">
+                <img src="img/earth-picture.webp" alt="Earth">
+            </div>
+            <div class="banner-text">
+                <h2>Space Net</h2>
+                <p>Internet Provieder you can trust!</p>
+                <div class="get-button">
+                    <button>Get Connected</button>
+                </div>
             </div>
         </div>
-        <div class="services">
-            <h2 id="services">Services</h2>
-            <p>Space Net offers its customers a full range of services for a steady Internet connection.</p>
-            <ul>
-                <li>Home and Office Internet</li>
-                <li>Hosting and Cloud Storage</li>
-                <li>Wi-Fi Hotspots</li>
-            </ul>
+        <div class="about-us" id="about-us">
+            <div class="about-us-image">
+                <img src="img/illustration-man.png" alt="Illustration">
+            </div>
+            <div class="about-us-text">
+                <h2>About us</h2>
+                <p>We offer fast and steady Internet for home, office, and commercial purposes.</p>
+                <p>Space Net is one of the largest Internet service providers in the USA. We offer services both for
+                    home and for offices, commercial organizations, large companies. Switching to Space Net, you will
+                    receive high-speed, steady, and secure Internet for your purposes.</p>
+                <div class="get-button">
+                    <button>Get Connected</button>
+                </div>
+                <div class="pricing-button">
+                    <button>Pricing</button>
+                </div>
+            </div>
+        </div>
+        <div class="services" id="services">
+            <div class="services-main">
+                <h2>Services</h2>
+                <p>Space Net offers its customers a full range of services for a steady Internet connection.</p>
+            </div>
+            <div class="services-list">
+                <article class="home-and-office">
+                    <h3>Home and Office Internet</h3>
+                    <img src="img/home-and-office.svg" alt="Home and office">
+                </article>
+                <article class="hosting-and-storage">
+                    <h3>Hosting and Cloud Storage</h3>
+                    <img src="img/hosting-and-storage.svg" alt="Hosting and Storage">
+                </article>
+                <article class="wi-fi-hotspots">
+                    <h3>Wi-Fi Hotspots</h3>
+                    <img src="img/wi-fi-hotspots.svg" alt="Wi-Fi Hotspots">
+                </article>
+            </div>
         </div>
         <div class="get-connected">
             <h2>Want to Get Connected?</h2>
             <p>Order Space Net Internet and get up to 100Mbps of speed for a low monthly price.</p>
-            <div>
+            <div class="request-button">
                 <button>Send a Request</button>
             </div>
         </div>
@@ -62,13 +90,13 @@
             <h3> ORDER INTERNET AND A $100 SPACE NET VOUCHER.</h3>
             <p>Deal Expires: June 13, 2021</p>
             <div>
-                <button>Get Connected</button>
+                <button class="get-button">Get Connected</button>
             </div>
         </div>
-        <div class="pricing">
-            <h2 id="plans">Pricing</h2>
+        <div class="pricing" id="plans">
+            <h2>Pricing</h2>
             <p>Choose the best plan for your needs.</p>
-            <article>
+            <article class="home-plan">
                 <h3>Home</h3>
                 <h4>$39 per month</h4>
                 <ul>
@@ -76,11 +104,11 @@
                     <li>Speed up to 80Mbps</li>
                     <li>IPTV</li>
                 </ul>
-                <div>
+                <div class="select-button">
                     <button>Select plan</button>
                 </div>
             </article>
-            <article>
+            <article class="office-plan">
                 <h3>Office</h3>
                 <h4>$85 per month</h4>
                 <ul>
@@ -88,11 +116,11 @@
                     <li>5 Tbs for cloud storage</li>
                     <li>Private IP-telephony line</li>
                 </ul>
-                <div>
+                <div class="select-button">
                     <button>Select plan</button>
                 </div>
             </article>
-            <article>
+            <article class="pro-plan">
                 <h3>Pro</h3>
                 <h4>$100 per month</h4>
                 <ul>
@@ -100,38 +128,44 @@
                     <li>Speed up to 100Mbps</li>
                     <li>IPTV, cloud storage</li>
                 </ul>
-                <div>
+                <div class="select-button">
                     <button>Select plan</button>
                 </div>
             </article>
         </div>
-        <div class="contacts">
-            <h2 id="contact_us">Want to Switch to Space Net?</h2>
-            <form method="POST" action="https://formspree.io/f/xleagkwr">
-                <input type="text" placeholder="Name" name="user-name">
-                <input type="text" placeholder="Phone number" name="user-phone-number">
-                <input type="text" placeholder="E-mail" name="user-email">
-                <input type="text" placeholder="Your message" name="user-message">
-                <button type="submit">Request a quote</button>
-            </form>
+        <div class="contacts" id="contacts">
+            <div class="contact-form">
+                <h2>Want to Switch to Space Net?</h2>
+                <form method="POST" action="https://formspree.io/f/xleagkwr">
+                    <input type="text" placeholder="Name" name="user-name">
+                    <input type="text" placeholder="Phone number" name="user-phone-number">
+                    <input type="text" placeholder="E-mail" name="user-email">
+                    <input type="text" placeholder="Your message" name="user-message">
+                    <button type="submit">Request a quote</button>
+                </form>
+            </div>
         </div>
         <div class="partners">
             <h2>Partners</h2>
             <p>We cooperate with the largest software and hardware manufacturers, security experts.</p>
-            <img width="200" src="img/cisco.webp" alt="Cisco">
-            <img width="200" src="img/ibm.webp" alt="IBM">
-            <img width="200" src="img/microsoft.png" alt="Microsoft">
-            <img width="200" src="img/united-services-germany.png" alt="United Services Germany">
+            <img src="img/cisco.webp" alt="Cisco">
+            <img src="img/ibm.webp" alt="IBM">
+            <img src="img/microsoft.png" alt="Microsoft">
+            <img src="img/united-services-germany.png" alt="United Services Germany">
         </div>
     </main>
     <footer>
         <div class="end">
+            <div class="home-end">
+                <a class="logo-end" href="index.html">
+                    <img width="188" height="55" src="img/end-space-logo.svg" alt="Space Net Logo End">
+                </a>
+            </div>
             <nav>
-                <img width="100" src="img/end-space-logo.svg" alt="Space Net Logo End">
-                <a href="#about_us">About us</a>
+                <a href="#about-us">About us</a>
                 <a href="#services">Services</a>
                 <a href="#plans">Plans</a>
-                <a href="#contact_us">Contact us</a>
+                <a href="#contacts">Contact us</a>
                 <a href="cart.html">Cart</a>
             </nav>
         </div>
