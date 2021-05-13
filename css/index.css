@@ -1,93 +1,114 @@
-@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant&display=swap");
+
+:root {
+  font-family: "Assistant", sans-serif;
+  --main-color: black;
+  --accent-collor: white;
+}
 
 * {
   padding: 0;
   margin: 0;
-  font-family: "Assistant", sans-serif;
 }
 
-.banner {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+body {
+  margin: auto;
+  max-width: 990px;
+}
+
+.heading .logo {
+  display: flex;
+  flex: 1;
+}
+
+.heading nav a {
+  display: block;
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+.heading nav a:hover {
+  color: rgba(0, 0, 255, 0.555);
+}
+
+@media (min-width: 700px) {
+  .heading {
+    display: flex;
+  }
+
+  .heading nav {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+header {
+  background-image: url(../img/background-banner.svg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 90% 90%;
+  min-height: 800px;
+}
+
+header .banner {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-around;
+  margin: 100px 0px 100px 0px;
+}
+
+.banner h1 {
+  font-size: 100px;
+  text-shadow: 7px 7px 7px rgb(151, 147, 147);
+}
+
+.banner-image {
+  margin: 0px 50px 0px 50px;
 }
 
 .banner-text {
   text-align: center;
 }
 
-.banner-text p {
+header .banner .banner-text {
+  flex-direction: column;
+  margin: 0px 50px 0px 50px;
+}
+
+header .banner .banner-text p {
   color: rgb(145, 150, 154);
 }
 
-.about-us {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.about-us-text {
+.button {
+  display: inline-block;
+  width: 15em;
+  font-size: 100%;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: rgb(83, 154, 216) 0 1px 2px;
+  text-decoration: none;
   text-align: center;
+  line-height: 1.1;
+  white-space: pre-line;
+  padding: 0.7em 0;
+  border: 1px solid;
+  border-color: #60a3d8 #2970a9 #2970a9 #60a3d8;
+  outline: none;
+  background: #60a3d8 linear-gradient(#76abd4, #529cd8 50%, #267dc5);
+  box-shadow: inset rgba(255, 255, 255, 0.5) 1px 1px;
+  margin: 40px 40px 40px 40px;
 }
 
-.special-offer {
-  background-image: url(../img/background-space.png);
+.button:hover {
+  color: rgb(255, 255, 255);
+  background-image: linear-gradient(#7bb0d8, #539ad1 50%, #247dc5);
 }
 
-.services {
-  background-image: url(../img/services-background.webp);
-  background-size: cover;
-  background-position: center;
-  min-height: 300px;
-}
-
-.services-list {
-  padding: 110px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  text-align: center;
-}
-
-.services-list img {
-  display: block;
-  width: 25%;
-}
-
-.home-and-office {
-  background-image: url(../img/background-home.svg);
-  background-size: cover;
-  background-position: center;
-  min-height: 300px;
-}
-
-.hosting-and-storage {
-  background-image: url(../img/background-hosting.svg);
-  background-size: cover;
-  background-position: center;
-  min-height: 300px;
-}
-
-.wi-fi-hotspots {
-  background-image: url(../img/background-wi-fi.svg);
-  background-size: cover;
-  background-position: center;
-  min-height: 300px;
-}
-
-#contacts {
-  background-image: url(../img/background-satellite.webp);
-}
-
-.contact-form {
-  background-color: rgba(35, 44, 53, 0.85);
-}
-
-input {
-  color: rgba(40, 49, 57, 0.6);
-}
-
-.partners {
-  background-color: rgb(245, 243, 236);
-}
-
-.end {
-  background-color: rgb(2, 2, 31);
+.button:active {
+  color: rgb(255, 255, 255);
+  border-color: #2970a9;
+  background-image: linear-gradient(#5796c8, #6aa2ce);
+  box-shadow: none;
 }
