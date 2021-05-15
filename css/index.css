@@ -1,9 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Assistant&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;800&display=swap");
 
 :root {
   font-family: "Assistant", sans-serif;
+  line-height: 1.5;
   --main-color: black;
-  --accent-collor: white;
+  --accent-color: white;
+  --paragraph-color: rgb(145, 150, 154);
+  --nav-hover-color: rgba(0, 0, 255, 0.555);
+  --about-us-background-color: white;
 }
 
 * {
@@ -11,104 +15,219 @@
   margin: 0;
 }
 
-body {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 980px;
   margin: auto;
-  max-width: 990px;
+  align-items: center;
 }
 
-.heading .logo {
-  display: flex;
-  flex: 1;
-}
-
-.heading nav a {
-  display: block;
+/* Buttons */
+.btn-main {
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: top;
+  padding: 10px 30px;
+  color: var(--accent-color);
+  background-image: linear-gradient(#7eb8e4, #4ea0e4 50%, #1d82d4);
+  border: 1px solid;
+  text-align: center;
   text-decoration: none;
-  color: var(--main-color);
+  transition: color 0.7s;
+  box-shadow: rgba(218, 215, 231, 0.5) 3px 3px;
 }
 
-.heading nav a:hover {
-  color: rgba(0, 0, 255, 0.555);
+.btn-main:hover {
+  color: var(--accent-color);
+  background-image: linear-gradient(#1d82d4, #4ea0e4 50%, #7eb8e4);
 }
 
-@media (min-width: 700px) {
-  .heading {
-    display: flex;
-  }
-
-  .heading nav {
-    display: flex;
-    flex: 1;
-    justify-content: space-around;
-    align-items: center;
-  }
-}
-
-header {
+/* Header */
+.header {
   background-image: url(../img/background-banner.svg);
+  background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-size: 90% 90%;
-  min-height: 800px;
+  width: 100%;
+  height: 100%;
+  top: 30px;
+  left: 0;
+  right: 0;
 }
 
-header .banner {
+.header-logo {
+  margin: 10px;
+}
+
+.header-inner {
   display: flex;
-  flex: 1;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
-  margin: 100px 0px 100px 0px;
 }
 
-.banner h1 {
-  font-size: 100px;
-  text-shadow: 7px 7px 7px rgb(151, 147, 147);
+/* Nav */
+.nav .nav-link {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--main-color);
+  vertical-align: top;
+  margin: 0 20px;
+  text-decoration: none;
+  transition: color 0.2s linear;
+}
+
+.nav-link:hover {
+  color: var(--nav-hover-color);
+}
+
+.social-media-links {
+  margin: 0 3px;
+  text-decoration: none;
+}
+
+/* Banner */
+.banner {
+  margin: 100px 0px 0px 0px;
+}
+
+@media (min-width: 600px) {
+  .banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .banner-image {
-  margin: 0px 50px 0px 50px;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.banner-image img {
+  width: 100%;
+  height: auto;
 }
 
 .banner-text {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-}
-
-header .banner .banner-text {
   flex-direction: column;
-  margin: 0px 50px 0px 50px;
+  margin-bottom: 150px;
 }
 
-header .banner .banner-text p {
-  color: rgb(145, 150, 154);
+.banner-title {
+  color: var(--main-color);
+  font-size: 85px;
+  font-weight: 700;
+  line-height: 1;
 }
 
-.button {
-  display: inline-block;
-  width: 15em;
-  font-size: 100%;
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: rgb(83, 154, 216) 0 1px 2px;
-  text-decoration: none;
+.banner-paragraph {
+  margin: 20px 50px 50px 50px;
+  color: var(--paragraph-color);
+  font-size: 18px;
+}
+
+/* Main */
+.about-us-background {
+  background-image: url(../img/background-about-us.svg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+.about-us {
+  padding-top: 100px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 600px) {
+  .about-us {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+  }
+}
+
+.about-us-image {
+  position: relative;
+}
+
+.about-us-image img {
+  width: 100%;
+  height: auto;
+}
+
+.about-us-text {
+  background-color: var(--about-us-background-color);
+}
+
+@media (max-width: 600px) {
+  .about-us-text {
+    margin-top: 50px;
+  }
+}
+
+/* Services */
+#services {
+  background-image: url(../img/services-background.webp);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 100%;
+  color: var(--accent-color);
+  align-items: center;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  line-height: 1.1;
-  white-space: pre-line;
-  padding: 0.7em 0;
-  border: 1px solid;
-  border-color: #60a3d8 #2970a9 #2970a9 #60a3d8;
-  outline: none;
-  background: #60a3d8 linear-gradient(#76abd4, #529cd8 50%, #267dc5);
-  box-shadow: inset rgba(255, 255, 255, 0.5) 1px 1px;
-  margin: 40px 40px 40px 40px;
+  flex-direction: column;
 }
 
-.button:hover {
-  color: rgb(255, 255, 255);
-  background-image: linear-gradient(#7bb0d8, #539ad1 50%, #247dc5);
+article.home-office {
+  background-image: url(../img/background-home.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.button:active {
-  color: rgb(255, 255, 255);
-  border-color: #2970a9;
-  background-image: linear-gradient(#5796c8, #6aa2ce);
-  box-shadow: none;
+article.hosting-storage {
+  background-image: url(../img/background-hosting.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+article.wifi-hotspots {
+  background-image: url(../img/background-wi-fi.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Connected */
+.connected-background {
+  background-image: url(../img/background-connected.webp);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 100%;
+  color: var(--accent-color);
 }
