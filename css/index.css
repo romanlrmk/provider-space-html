@@ -97,18 +97,17 @@ h6 {
 }
 
 #menu-toggle {
-  opacity: 0;
+  display: none;
 }
 
 .menu-box {
-  position: absolute;
   background-color: var(--accent-color);
   background-attachment: fixed;
-  visibility: hidden;
   width: 100vw;
   height: 100vh;
-  margin: auto;
   list-style: none;
+  visibility: hidden;
+  position: absolute;
 }
 
 .menu-item {
