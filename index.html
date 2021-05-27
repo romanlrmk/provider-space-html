@@ -125,7 +125,9 @@
           <div class="banner-text">
             <h1 class="banner-title">Space Net</h1>
             <p class="banner-paragraph">Internet Provieder you can trust!</p>
-            <a href="#contacts" class="btn-main">Get Connected</a>
+            <div class="banner-btn">
+              <a href="#contacts" class="btn-main">Get Connected</a>
+            </div>
           </div>
         </div>
       </div>
@@ -141,11 +143,12 @@
               />
             </div>
             <div class="about-us-text">
-              <h2>About us</h2>
-              <p>
+              <h2>About Us</h2>
+              <span></span>
+              <h3>
                 We offer fast and steady Internet for home, office, and
                 commercial purposes.
-              </p>
+              </h3>
               <p>
                 Space Net is one of the largest Internet service providers in
                 the USA. We offer services both for home and for offices,
@@ -153,11 +156,9 @@
                 Net, you will receive high-speed, steady, and secure Internet
                 for your purposes.
               </p>
-              <div class="get-button">
-                <button>Get Connected</button>
-              </div>
-              <div class="pricing-button">
-                <button>Pricing</button>
+              <div class="about-us-buttons">
+                <a href="#contacts" class="btn-main">Get Connected</a>
+                <a href="#plans" class="btn-accent">Pricing</a>
               </div>
             </div>
           </div>
@@ -167,13 +168,14 @@
         <div class="container">
           <div class="services-main">
             <h2>Services</h2>
+            <span></span>
             <p>
               Space Net offers its customers a full range of services for a
               steady Internet connection.
             </p>
           </div>
-          <div class="services-list row">
-            <article class="home-office card-col-12 col-sm-6 col-md-4">
+          <div class="services-list-row">
+            <article class="home-office">
               <img
                 width="70"
                 height="70"
@@ -185,7 +187,7 @@
                 <h5 class="card-title">Home and Office Internet</h5>
               </div>
             </article>
-            <article class="hosting-storage card-col-12 col-sm-6 col-md-4">
+            <article class="hosting-storage">
               <img
                 width="70"
                 height="70"
@@ -197,7 +199,7 @@
                 <h5 class="card-title">Hosting and Cloud Storage</h5>
               </div>
             </article>
-            <article class="wifi-hotspots card-col-12 col-sm-6 col-md-4">
+            <article class="wifi-hotspots">
               <img
                 width="70"
                 height="70"
@@ -213,20 +215,25 @@
         </div>
       </div>
       <div class="connected-background">
-        <div class="get-connected container">
-          <h2>Want to Get Connected?</h2>
-          <p>
-            Order Space Net Internet and get up to 100Mbps of speed for a low
-            monthly price.
-          </p>
-          <div class="request-button">
-            <button>Send a Request</button>
+        <div class="connected container">
+          <div class="empty"></div>
+          <div class="get-connected">
+            <h2>Want to Get Connected?</h2>
+            <span></span>
+            <p>
+              Order Space Net Internet and get up to 100Mbps of speed for a low
+              monthly price.
+            </p>
+            <div class="request-btn">
+              <a href="#contacts" class="btn-main">Send a Request</a>
+            </div>
           </div>
         </div>
       </div>
       <div class="special-offer-background">
         <div class="special-offer container">
           <h2>Special Offer</h2>
+          <span class="line"></span>
           <div class="countdown-cont">
             <div class="countdown-element days-cont">
               <p class="big-text" id="days">0</p>
@@ -247,8 +254,8 @@
           </div>
           <h3>ORDER INTERNET AND A $100 SPACE NET VOUCHER.</h3>
           <p>Deal Expires: January 1, 2022</p>
-          <div>
-            <button class="get-button">Get Connected</button>
+          <div class="offer-btn">
+            <a href="#contacts" class="btn-main">Get Connected</a>
           </div>
         </div>
       </div>
@@ -316,12 +323,14 @@
           </div>
         </div>
       </div>
-      <div class="partners container">
-        <h2>Partners</h2>
-        <p>
-          We cooperate with the largest software and hardware manufacturers,
-          security experts.
-        </p>
+      <div class="partners">
+        <div class="container">
+          <h2>Partners</h2>
+          <p>
+            We cooperate with the largest software and hardware manufacturers,
+            security experts.
+          </p>
+        </div>
       </div>
     </main>
     <footer>
@@ -337,11 +346,11 @@
               />
             </a>
           </div>
-          <nav>
-            <a href="#about-us">About us</a>
-            <a href="#services">Services</a>
-            <a href="#plans">Plans</a>
-            <a href="#contacts">Contact us</a>
+          <nav class="nav-footer">
+            <a class="footer-link" href="#about-us">About us</a>
+            <a class="footer-link" href="#services">Services</a>
+            <a class="footer-link" href="#plans">Plans</a>
+            <a class="footer-link" href="#contacts">Contact us</a>
             <!-- <a href="cart.html">Cart</a> -->
           </nav>
         </div>

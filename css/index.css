@@ -6,8 +6,12 @@
   --main-color: black;
   --accent-color: white;
   --paragraph-color: rgb(145, 150, 154);
-  --nav-hover-color: rgba(0, 0, 255, 0.555);
+  --nav-hover-color: rgba(28, 127, 212);
+  --end-nav-hover-color: rgba(13, 199, 222);
   --about-us-background-color: white;
+  --line-color: rgb(137, 93, 218);
+  --partners-back-color: rgb(232, 236, 239);
+  --footer-back-color: rgb(34, 44, 53);
 }
 
 * {
@@ -38,16 +42,33 @@ h6 {
   padding: 10px 30px;
   color: var(--accent-color);
   background-image: linear-gradient(#7eb8e4, #4ea0e4 50%, #1d82d4);
-  border: 1px solid;
   text-align: center;
   text-decoration: none;
   transition: color 0.7s;
-  box-shadow: rgba(218, 215, 231, 0.5) 3px 3px;
+  margin: 10px;
 }
 
 .btn-main:hover {
   color: var(--accent-color);
   background-image: linear-gradient(#1d82d4, #4ea0e4 50%, #7eb8e4);
+}
+
+.btn-accent {
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: top;
+  padding: 10px 30px;
+  color: var(--accent-color);
+  background-image: linear-gradient(#1d82d4, #4ea0e4 50%, #7eb8e4);
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.7s;
+  margin: 10px;
+}
+
+.btn-accent:hover {
+  color: var(--accent-color);
+  background-image: linear-gradient(#7eb8e4, #4ea0e4 50%, #1d82d4);
 }
 
 /* Header */
@@ -73,7 +94,7 @@ h6 {
 /* Nav */
 .nav .nav-link {
   display: inline-block;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--main-color);
   vertical-align: top;
@@ -240,18 +261,31 @@ h6 {
   font-size: 18px;
 }
 
+.banner-btn {
+  padding-bottom: 25px;
+}
+
 /* Main */
+
+/* About Us */
 .about-us-background {
   background-image: url(../img/background-about-us.svg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   width: 100%;
+  padding-bottom: 30px;
 }
 
 .about-us {
   padding-top: 100px;
-  margin-bottom: 30px;
+  padding-bottom: 100px;
+}
+
+.about-us-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 @media (min-width: 600px) {
@@ -273,6 +307,43 @@ h6 {
 
 .about-us-text {
   background-color: var(--about-us-background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 1.6;
+}
+
+.about-us-text h2 {
+  font-size: 50px;
+  padding-bottom: 15px;
+}
+
+.about-us-text span:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--line-color);
+}
+
+.about-us-text h3 {
+  font-weight: 600;
+  font-size: 22px;
+  opacity: 0.8;
+  padding-top: 15px;
+}
+
+.about-us-text p {
+  color: var(--paragraph-color);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.about-us-buttons {
+  padding-bottom: 25px;
 }
 
 @media (max-width: 600px) {
@@ -289,35 +360,101 @@ h6 {
   background-attachment: fixed;
   background-repeat: no-repeat;
   width: 100%;
+  margin: auto;
   color: var(--accent-color);
-  align-items: center;
   display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   flex-direction: column;
 }
 
+.services-main h2 {
+  font-size: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.services-main p {
+  font-size: 16px;
+  padding-top: 25px;
+  padding-bottom: 45px;
+  text-align: center;
+}
+
+.services-main span:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--accent-color);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.services-list-row {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+  margin-bottom: 85px;
+}
+
+@media (max-width: 900px) {
+  .services-list-row {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-list-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 300px));
+    grid-column-gap: 15px;
+    grid-row-gap: 20px;
+    justify-content: center;
+  }
+}
+
 article.home-office {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-image: url(../img/background-home.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  width: 300px;
+  height: 250px;
 }
 
 article.hosting-storage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-image: url(../img/background-hosting.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  width: 300px;
+  height: 250px;
 }
 
 article.wifi-hotspots {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-image: url(../img/background-wi-fi.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  width: 300px;
+  height: 250px;
 }
 
 /* Connected */
@@ -332,6 +469,51 @@ article.wifi-hotspots {
   min-height: 500px;
 }
 
+.connected {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 800px) {
+  .connected {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.get-connected {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.get-connected h2 {
+  font-size: 50px;
+  padding-bottom: 15px;
+  text-align: center;
+  padding-top: 45px;
+}
+
+.get-connected span:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--accent-color);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.get-connected p {
+  font-size: 18px;
+  padding-bottom: 15px;
+  text-align: center;
+  padding-top: 25px;
+}
+
 /* Special Offer */
 .special-offer-background {
   background-image: url(../img/background-space.png);
@@ -342,6 +524,7 @@ article.wifi-hotspots {
   width: 100%;
   color: var(--accent-color);
   min-height: 600px;
+  margin: 0;
 }
 
 .special-offer {
@@ -351,15 +534,29 @@ article.wifi-hotspots {
 }
 
 .special-offer h2 {
-  font-size: 3rem;
+  font-size: 50px;
   text-align: center;
-  margin-top: 6rem;
+  margin-top: 80px;
+  margin-bottom: 25px;
+}
+
+.line:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--accent-color);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
 
 .countdown-cont {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
+  margin-top: 25px;
+  margin-bottom: 35px;
 }
 
 .big-text {
@@ -376,4 +573,82 @@ article.wifi-hotspots {
 .countdown-element span {
   font-size: 1.3rem;
   color: var(--paragraph-color);
+}
+
+/* Pricing */
+#plans {
+  background-image: url(../img/background-banner.svg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100%;
+}
+
+/* Contacts */
+#contacts {
+  background-image: url(../img/background-satellite.webp);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 600px;
+}
+
+/* Partners */
+.partners {
+  background-color: var(--partners-back-color);
+  background-size: cover;
+  min-height: 600px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--footer-back-color);
+  background-size: cover;
+  min-height: 150px;
+}
+
+.header-logo {
+  margin: 10px;
+}
+
+.end {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+/* Nav Footer*/
+.home-end {
+  margin: 15px;
+}
+
+.nav-footer .footer-link {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--accent-color);
+  vertical-align: top;
+  margin: 0 20px;
+  text-decoration: none;
+  transition: color 0.2s linear;
+}
+
+.footer-link:hover {
+  color: var(--end-nav-hover-color);
+}
+
+@media (max-width: 650px) {
+  .end {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+  }
+  .nav-footer .footer-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+  }
 }
