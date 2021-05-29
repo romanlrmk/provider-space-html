@@ -9,10 +9,11 @@
   --nav-hover-color: rgba(28, 127, 212);
   --end-nav-hover-color: rgba(13, 199, 222);
   --about-us-background-color: white;
-  --line-color: rgb(137, 93, 218);
+  --line-color: rgb(26, 75, 167);
   --partners-back-color: rgb(232, 236, 239);
   --product-icon-back: linear-gradient(0deg, #1d7ad1 0%, #0fc9df 100%);
   --footer-back-color: rgb(34, 44, 53);
+  --contacts-form-background: rgba(35, 44, 53, 0.85);
 }
 
 * {
@@ -220,6 +221,18 @@ h6 {
 /* Banner */
 .banner {
   margin: 180px 0px 0px 0px;
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-top: -2%;
+  }
+
+  to {
+    height: 100%;
+  }
 }
 
 @media (min-width: 600px) {
@@ -402,25 +415,10 @@ h6 {
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 15px;
   margin-bottom: 85px;
-}
-
-@media (max-width: 900px) {
-  .services-list-row {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 15px;
-  }
-}
-
-@media (max-width: 600px) {
-  .services-list-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 300px));
-    grid-column-gap: 15px;
-    grid-row-gap: 20px;
-    justify-content: center;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 article.home-office {
@@ -617,19 +615,29 @@ article.wifi-hotspots {
 
 .product-items {
   color: var(--accent-color);
-  display: flex;
   margin: 0 -15px;
+  display: flex;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 845px) {
   .product-items {
-    display: grid;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 645px) {
+  .product-items {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
   }
 }
 
 .product-column {
   flex: 0 1 33.333%;
-  padding: 35px 15px;
+  margin: 35px 15px;
+  width: 100%;
 }
 
 .product-item {
@@ -638,6 +646,7 @@ article.wifi-hotspots {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 5px;
+  margin: 0 auto;
 }
 
 .product-icon {
@@ -693,6 +702,77 @@ article.wifi-hotspots {
   background-position: center;
   background-attachment: fixed;
   min-height: 600px;
+  margin: 0 auto;
+}
+
+.contacts .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.contact-us-space {
+  background-color: var(--contacts-form-background);
+  width: 100%;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.contact-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-header h2 {
+  color: var(--accent-color);
+  font-size: 50px;
+  padding-bottom: 15px;
+  text-align: center;
+  padding-top: 45px;
+  display: block;
+}
+
+.contact-header span:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--line-color);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+input[type="text"] {
+  background: none;
+  width: 100%;
+  padding: 12px 0 12px 45px;
+  margin: 15px 0;
+  box-sizing: border-box;
+  border: 1px solid #555;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border: 2.5px solid var(--line-color);
+}
+
+.request-btn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.google-map {
+  display: flex;
 }
 
 /* Partners */
