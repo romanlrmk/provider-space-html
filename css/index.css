@@ -651,6 +651,10 @@ article.wifi-hotspots {
   margin: 0px auto;
 }
 
+.product-icon img {
+  width: 60px;
+}
+
 .product-tittle {
   text-align: center;
 }
