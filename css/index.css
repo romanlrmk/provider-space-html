@@ -11,6 +11,7 @@
   --about-us-background-color: white;
   --line-color: rgb(137, 93, 218);
   --partners-back-color: rgb(232, 236, 239);
+  --product-icon-back: linear-gradient(0deg, #1d7ad1 0%, #0fc9df 100%);
   --footer-back-color: rgb(34, 44, 53);
 }
 
@@ -274,6 +275,7 @@ h6 {
   background-position: center;
   background-attachment: fixed;
   width: 100%;
+  min-height: 600px;
   padding-bottom: 30px;
 }
 
@@ -310,7 +312,6 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
   padding-left: 15px;
   padding-right: 15px;
   line-height: 1.6;
@@ -359,11 +360,16 @@ h6 {
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  min-height: 600px;
   width: 100%;
   margin: auto;
   color: var(--accent-color);
   display: flex;
   flex-direction: column;
+}
+
+.services-main {
+  margin: 0 auto;
 }
 
 .services-main h2 {
@@ -375,8 +381,7 @@ h6 {
 
 .services-main p {
   font-size: 16px;
-  padding-top: 25px;
-  padding-bottom: 45px;
+  padding: 25px 15px 35px 5px;
   text-align: center;
 }
 
@@ -466,7 +471,7 @@ article.wifi-hotspots {
   background-repeat: no-repeat;
   width: 100%;
   color: var(--accent-color);
-  min-height: 500px;
+  min-height: 600px;
 }
 
 .connected {
@@ -576,11 +581,105 @@ article.wifi-hotspots {
 }
 
 /* Pricing */
-#plans {
+.pricing {
   background-image: url(../img/background-banner.svg);
   background-size: cover;
   background-position: center;
-  min-height: 100%;
+  height: 100%;
+}
+
+.pricing h2 {
+  font-size: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.pricing span:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--line-color);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.pricing p {
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 15px;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.product-items {
+  color: var(--accent-color);
+  display: flex;
+  margin: 0 -15px;
+}
+
+@media (max-width: 800px) {
+  .product-items {
+    display: grid;
+  }
+}
+
+.product-column {
+  flex: 0 1 33.333%;
+  padding: 35px 15px;
+}
+
+.product-item {
+  background-image: url(../img/products-background.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+}
+
+.product-icon {
+  background-image: var(--product-icon-back);
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0px auto;
+}
+
+.product-tittle {
+  text-align: center;
+}
+
+.product-tittle h3 {
+  padding: 30px;
+}
+
+.product-label {
+  text-align: center;
+}
+
+.product-opportunities {
+  text-align: center;
+  padding: 20px;
+  font-size: 15px;
+  line-height: 30px;
+  color: var(--paragraph-color);
+}
+
+.product-opportunities ul {
+  list-style: none;
+}
+
+.select-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0px auto;
 }
 
 /* Contacts */
